@@ -1,0 +1,80 @@
+generated: '2026-08-23'
+method: searched
+source: https://iristelehealth.com/insights/iris-telehealth-earns-joint-commission-behavioral-health-care-recertification/
+note: >-
+  Iris Telehealth publishes no machine-readable API contract, so there is no spec to read a
+  technical conformance profile out of. Every API/data-interchange standard below is therefore
+  recorded conforms:false with reason `no-contract` — an honest N/A, not a failure. What Iris
+  DOES publish is a clinical accreditation, and that is captured under certifications[] with
+  its own evidence. The distinction is deliberate: an accreditation of the care delivered is
+  not a conformance claim about an interface.
+certifications:
+- id: joint-commission-behavioral-health-care
+  name: The Joint Commission - Behavioral Health Care and Human Services Accreditation
+  body: The Joint Commission
+  status: accredited
+  first_awarded: '2019'
+  recertified: true
+  scope: Behavioral health care and human services (Iris Telehealth Medical Group, PA)
+  evidence:
+  - https://iristelehealth.com/insights/iris-telehealth-earns-joint-commission-behavioral-health-care-recertification/
+  - https://iristelehealth.com/blog/the-importance-of-joint-commission-accreditation/
+  third_party_registry: https://www.jointcommission.org/en-us/about-us/recognizing-excellence/find-accredited-organizations/601598
+  third_party_registry_status: 403
+  third_party_registry_note: >-
+    The Joint Commission's public provider-locator entry for Iris Telehealth Medical Group, PA
+    (organization 601598) returns 403 to a non-browser client — an edge bot policy, not a
+    missing record. Recorded as a lead, not as verified-by-us.
+certifications_not_published:
+- SOC 2
+- HITRUST CSF
+- ISO/IEC 27001
+- HIPAA third-party attestation
+- FedRAMP
+certifications_not_published_note: >-
+  Iris Telehealth operates on protected health information and states HIPAA-compliant
+  practice in prose, but publishes no attestation, audit report, or trust center a reviewer
+  could reach without asking. This is the single clearest published-posture gap for a
+  company in this regulatory regime.
+standards:
+- id: fhir
+  label: FHIR
+  conforms: false
+  reason: no-contract
+  evidence: >-
+    No FHIR CapabilityStatement and no /fhir endpoint on any resolvable Iris Telehealth host.
+    Iris clinicians work inside the PARTNER's EHR, so any FHIR surface in the workflow belongs
+    to the partner's Epic/Cerner/athenahealth instance, not to Iris.
+- id: smart-on-fhir
+  label: SMART on FHIR
+  conforms: false
+  reason: no-contract
+  evidence: 'No /.well-known/smart-configuration; no OAuth authorization server published.'
+- id: hl7-v2
+  label: HL7 v2
+  conforms: false
+  reason: not-published
+  evidence: 'No published interface specification, message type, or integration guide.'
+- id: oauth2
+  label: OAuth 2.0
+  conforms: false
+  reason: no-contract
+  evidence: 'https://iristelehealth.com/.well-known/oauth-authorization-server returned 404.'
+- id: oidc
+  label: OpenID Connect
+  conforms: false
+  reason: no-contract
+  evidence: 'https://iristelehealth.com/.well-known/openid-configuration returned 404.'
+- id: rfc9457
+  label: RFC 9457 Problem Details
+  conforms: false
+  reason: no-contract
+  evidence: 'No API, therefore no error envelope to evaluate.'
+domain_standard:
+  detected: false
+  regime: healthcare
+  candidates_checked: [fhir, us-core, uscdi, smart-on-fhir, hl7-v2, c-cda, cds-hooks, x12]
+  note: >-
+    Reward-only check. Iris Telehealth's market (FHIR / US Core / HL7 v2) does have domain
+    standards, but Iris ships no contract in which to declare one, so nothing is awarded and
+    nothing is penalized.

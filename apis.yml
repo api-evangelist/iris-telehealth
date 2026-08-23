@@ -1,17 +1,55 @@
 aid: iris-telehealth
 name: Iris Telehealth
-description: 'Iris Telehealth is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Iris Telehealth is an Austin, Texas telepsychiatry company, founded in
+  2013, that delivers virtual behavioral health care to healthcare organizations rather
+  than direct to consumers. It contracts psychiatrists, psychiatric nurse practitioners,
+  LCSWs and LPCs to hospitals and health systems, community mental health centers,
+  community health centers and FQHCs, and Certified Community Behavioral Health Clinics,
+  covering pediatric through geriatric populations and low-acuity therapy through high-acuity
+  psychiatry. Its service lines are Virtual Clinic (comprehensive care and behavioral
+  health integration), On-Demand Services (24/7 emergency department psychiatry support),
+  Scheduled Services (matched provider staffing), Bridge Clinic, and Iris Insights,
+  an AI-enabled behavioral health analytics platform covering risk optimization, capacity
+  management, a behavioral health command center and revenue cycle analytics. The company
+  reports over 430 clinicians and over 210 partner organizations, and has been accredited
+  by the Joint Commission for behavioral health care since 2019, earning recertification
+  since. Its delivery model is deliberately technology-agnostic: Iris clinicians work
+  inside each partner''s existing EMR/EHR and e-prescribing tools over HIPAA-compliant
+  video, so the integration burden sits with the partner''s systems. Iris Telehealth
+  publishes no public developer program, API documentation, SDKs, or machine-readable
+  API contract, and operates no public GitHub organization.'
 url: https://raw.githubusercontent.com/api-evangelist/iris-telehealth/refs/heads/main/apis.yml
+image: https://iristelehealth.com/wp-content/uploads/2023/07/Home-page-preview_social-sharing-image_7.5.23-01.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-harvest-source: https://forgeglobal.com/iris-telehealth_stock/
+x-tier: profile
+x-tier-reason: identity-enriched-no-api-surface
+specificationVersion: '0.23'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Healthcare
+- Telehealth
+- Behavioral Health
+- Mental Health
+- Telepsychiatry
+- Clinical Services
+- Health Systems
+- Artificial Intelligence
+- Analytics
+tags_raw:
+- Company
+- Health Care
+- Telehealth
+- Behavioral Health
+- Mental Health
+- Telepsychiatry
+- Clinical Services
+- Health Systems
+- Artificial Intelligence
+- Analytics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +57,73 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/iris-telehealth-domain-security.yml
 - type: Website
+  url: https://iristelehealth.com/
+- type: Blog
+  url: https://iristelehealth.com/blog/
+- type: Support
+  url: https://iristelehealth.com/contact-us/
+- type: PrivacyPolicy
+  url: https://iristelehealth.com/privacy-policy/
+- type: Careers
+  url: https://iristelehealth.com/careers/
+- type: Newsletter
+  url: https://iristelehealth.com/resources/newsletters/
+- type: Resources
+  url: https://iristelehealth.com/resources/insights-center/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/iris-telehealth
+- type: SecondaryMarket
   url: https://forgeglobal.com/iris-telehealth_stock/
+- type: LLMsTxt
+  url: llms/iris-telehealth-llms.txt
+- type: Conformance
+  url: conformance/iris-telehealth-conformance.yml
+- type: Compliance
+  url: conformance/iris-telehealth-conformance.yml
+- type: Plans
+  url: plans/iris-telehealth-plans-pricing.yml
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Iris Telehealth sells clinician hours and a managed analytics service, not software an
+    integrator can call: its own model is technology-agnostic — Iris psychiatrists work
+    inside the partner health system's existing EHR — so the only API in the workflow belongs
+    to the partner's Epic or Cerner instance, and the 69-page marketing site has no developer,
+    docs, or API page at all, while the one API-shaped hostname it does publish,
+    api.iristelehealth.com, resolves in DNS to 18.118.52.125 but refuses every connection on
+    both 443 and 80 from the public internet.
+  evidence:
+  - url: https://api.iristelehealth.com/
+    status: 0
+  - url: https://iristelehealth.com/openapi.json
+    status: 404
+  - url: https://iristelehealth.com/swagger.json
+    status: 404
+  - url: https://iristelehealth.com/api-docs
+    status: 404
+  - url: https://iristelehealth.com/graphql
+    status: 404
+  - url: https://iristelehealth.com/llms.txt
+    status: 404
+  - url: https://iristelehealth.com/.well-known/agent-card.json
+    status: 404
+  - url: https://iristelehealth.com/.well-known/agent.json
+    status: 404
+  - url: https://iristelehealth.com/.well-known/security.txt
+    status: 404
+  - url: https://iristelehealth.com/.well-known/api-catalog
+    status: 404
+  - url: https://iristelehealth.com/page-sitemap.xml
+    status: 200
+  - url: https://iristelehealth.com/wp-json/
+    status: 200
+  checked: '2026-08-23'

@@ -1,0 +1,56 @@
+generated: '2026-08-23'
+method: probed
+source: live HTTPS probes of every Iris Telehealth host resolvable in DNS, 2026-08-23
+note: >-
+  Every /.well-known/ path probed on the public marketing host returned 404 with an HTML
+  body — the WordPress theme's own 404 page, not a document. No WellKnown or SecurityTxt
+  pointer is emitted in apis.yml, because this file records an ABSENCE: Iris Telehealth
+  serves no well-known document of any kind. The second host, api.iristelehealth.com,
+  resolves in public DNS to 18.118.52.125 but accepts no connection on either 443 or 80
+  from the public internet (curl exit 28, connection timed out), so every path there is
+  recorded as unreachable rather than as a 404 — the distinction matters, because an
+  unreachable host is a private/VPN-gated endpoint, not a missing document.
+hosts:
+- host: iristelehealth.com
+  reachable: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: api.iristelehealth.com
+  reachable: false
+  unreachable_reason: 'TCP connection to 18.118.52.125 timed out on both 443 and 80 (curl exit 28)'
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null

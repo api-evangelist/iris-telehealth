@@ -1,0 +1,24 @@
+generated: '2026-08-23'
+method: searched
+source: https://iristelehealth.com/contact-us/
+plan_count: 0
+public_pricing: false
+model: enterprise-contract
+note: >-
+  Iris Telehealth publishes no pricing of any kind. The full page sitemap
+  (https://iristelehealth.com/page-sitemap.xml, 69 URLs, fetched 2026-08-23) contains no
+  /pricing/, /plans/ or /cost/ page, and no service page states a rate, a per-encounter price,
+  or a staffing minimum. Engagement is a sales conversation: the site's only commercial
+  call-to-action is the contact form at /contact-us/, which routes by self-identified role
+  (healthcare organization, clinician, credentialing, investor). Contracts are negotiated per
+  partner organization and scoped to clinician hours and service line, which is the norm for
+  a clinical staffing and managed-services model rather than a self-serve product. plan_count
+  is 0 as a measured fact, not as a gap in this pass.
+evidence:
+- url: https://iristelehealth.com/page-sitemap.xml
+  status: 200
+  finding: 'no pricing page among 69 published pages'
+- url: https://iristelehealth.com/contact-us/
+  status: 200
+  finding: 'sales contact form is the only commercial entry point'
+plans: []
