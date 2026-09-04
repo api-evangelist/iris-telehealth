@@ -30,6 +30,19 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: low
+  source:
+  - plans
+  - security
+  generated: '2026-09-03'
+  method: derived
 image: https://iristelehealth.com/wp-content/uploads/2023/07/Home-page-preview_social-sharing-image_7.5.23-01.png
 x-type: company
 x-source: harvest:secondary-market
