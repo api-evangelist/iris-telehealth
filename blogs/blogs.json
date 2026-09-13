@@ -9,6 +9,13 @@
       "method": "discovered"
     },
     {
+      "source": "https://iristelehealth.com/blog/feed/",
+      "feed_url": "https://iristelehealth.com/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://iristelehealth.com/feed/",
       "feed_url": "https://iristelehealth.com/feed/",
       "title": "",
@@ -16,6 +23,6 @@
       "method": "feed"
     }
   ],
-  "post_count": 12,
-  "fetched": "2026-09-06T19:17:18Z"
+  "post_count": 21,
+  "fetched": "2026-09-13T13:00:00Z"
 }
